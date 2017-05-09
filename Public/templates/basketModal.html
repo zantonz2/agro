@@ -1,0 +1,46 @@
+<div class="modal__overlay"></div>
+<div class="modal basketModal ws">
+    <div class="modal-content">
+    	<h4 class="center">Корзина</h4>
+    	<table class="striped price__table" >
+    		<tr>
+    			<th class="col m1 center hide-on-small-only">№</th>
+    			<th class="col s4 m4 center ws__font">Наименование</th>
+    			<th class="col m2 center ws__font hide-on-small-only">Количество</th>
+    			<th class="col s4 center hide-on-med-and-up">Кол-во</th>
+    			<th class="col m2 center stringDouble hide-on-small-only">Цена за единицу</th>
+    			<th class="col s2 m2 center ws__font">Стоимость</th>
+    			<th class="col s2 m1 center">
+    			</th>
+    		</tr>
+    		<tr ng-repeat="product in basket.products track by $index">
+    			<td class="col m1 center hide-on-small-only"> {{$index+1}} </td>
+    			<td class="col s4 m4 ws__font"> {{product.name}} </td>
+    			<td class="col s4 m2 center ws__font">
+					<div class="changeCount">
+						<input class="changeCount__input" oninput="this.value = this.value.replace(/\D/g, '')"value="{{product.count}}" type="text" ng-model="product.count">
+						<div class="z-depth-1 waves-effect waves-red changeCount__button left hide-on-small-only"  ng-click="basket.changeCount($event,product)">-</div>
+						<div class="changeCount__button z-depth-1 waves-effect waves-green right hide-on-small-only ws__font"  ng-click="basket.changeCount($event,product)">+</div>
+					</div>
+    			</td>
+    			<td class="col m2 center hide-on-small-only"> {{product.price}} </td>
+    			<td class="col s2 m2 center"> {{product.price*product.count}} </td>
+    			<td class="col s2 m1 center">
+    				<a class="price__button waves-effect waves-light btn-floating center red lighten-1" ng-click="basket.deleteProduct($index)" title="Удалить из корзины">х</a> 
+    			</td>
+    		</tr>
+    		<tr>
+    			<th class="col s9 right-align">ИТОГО:</th>
+    			<th class="col s2 center">{{basket.totalPrice()}}</th>
+    			<th class="col s1">
+    				<a class="price__button waves-effect waves-light btn-floating center red lighten-1" ng-click="basket.deleteProduct('all')" title="Удалить всё">♻</a>
+    			</th>
+    		</tr>
+    	</table>
+    </div>
+    <div class="modal-content">
+    	<a href="" class="waves-effect waves-green btn green accent-3 right" ng-click="basket.closeModal()">Оформить заказ</a> 
+    	<a href="" class="waves-effect waves-red btn red lighten-2 left-align" ng-click="basket.closeModal()">Закрыть</a>
+    </div>
+
+</div>

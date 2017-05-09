@@ -1,0 +1,22 @@
+	
+<div class="price__wrapper ws">
+	<div class="bordered">
+		<div class="th col s6 center">Наименование</div>
+		<div class="th col s3 center ws__font hide-on-small-only">Количество</div>
+    	<div class="th col s3 center hide-on-med-and-up">Кол-во</div>
+		<div class="th col s2 center">Стоимость</div>
+		<div class="th col s1 center"></div>
+	</div>
+	<div class="tr bordered ws__font" ng-repeat="product in price.productsPrice">
+		<div class="td col s6 left">{{product.name}}</div>
+		<div class="td col s3 center">
+			<div class="changeCount">
+				<input class="changeCount__input" oninput="this.value = this.value.replace(/\D/g, '')" value="{{product.count}}" type="text" ng-model="product.count">
+				<div class="z-depth-1 waves-effect waves-red changeCount__button left ws-hide-on" ng-click="price.changeCount($event,product)">-</div>
+				<div class="changeCount__button z-depth-1 waves-effect waves-green right ws-hide-on" ng-click="price.changeCount($event,product)">+</div>
+			</div>
+		</div>
+		<div class="td col s2 center">{{product.price*product.count}}</div>
+		<div class="td col s1 center"><a class="price__button waves-effect waves-green btn-floating center white black-text" ng-click="price.addProduct($event,product)" title="Добавить в корзину">✔</a> </div>
+	</div>
+</div>

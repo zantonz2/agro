@@ -1,0 +1,331 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	min-height: 20rem;
+	background: url('../img/coz.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.price__wrapper {
+	min-width: 500px;
+}
+
+nav .logo {
+	height: 100%;
+	width: 20%;
+	font-size: 2rem;
+	color:#000000; 
+}
+
+.header__title {
+	height: 4rem;
+	font-size: 3rem;
+	color:#000000;
+	font-style: italic;
+	font-weight: 900;
+	line-height: 4rem;
+}
+
+.header {
+	position: relative;
+}
+.header__title_small {
+	font-size: 2rem;
+	line-height: 3rem;
+	height: 3rem;
+}
+
+.header__btn_small .btn {
+	height: 2rem;
+	width:100%;
+	line-height: 2rem;
+	box-shadow: none;
+	font-size: 3rem;
+}
+
+#dropdownHeader {
+	width: 100%;
+}
+
+
+.main {
+	background-color: rgba(185, 246, 202, 0.7);
+}
+
+.bold {
+	font-weight: 800;
+}
+
+.href_hide {
+	text-decoration: none;
+	color: #000000;
+	font-style: italic;
+}
+
+.basket{
+	width:48px;
+	height: 48px;
+	position:absolute;
+	right:12px;
+	top:72px;
+	-webkit-transition: all .2s linear 0s;
+	-moz-transition: all .2s linear 0s;
+	-o-transition: all .2s linear 0s;
+	transition: all .2s linear 0s;
+	-o-transform: scale(0.01,0.01);
+  	-ms-transform: scale(0.01,0.01);
+  	-moz-transform: scale(0.01,0.01);
+  	-webkit-transform: scale(0.01,0.01);
+ 	transform: scale(0.01,0.01);
+}
+
+@media only screen and (min-width: 1200px) {
+	.basket{
+		right:calc(16.66666% + 12px);
+	}
+}
+
+.basket.visible{
+	-o-transform: scale(1,1);
+  	-ms-transform: scale(1,1);
+  	-moz-transform: scale(1,1);
+  	-webkit-transform: scale(1,1);
+ 	transform: scale(1,1);
+}
+
+.basket:active{
+	-webkit-transition:.2s;
+	-moz-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+	-o-transform: scale(1.1,1.1);
+  	-ms-transform: scale(1.1,1.1);
+  	-moz-transform: scale(1.1,1.1);
+  	-webkit-transform: scale(1.1,1.1);
+ 	transform: scale(1.1,1.1);
+}
+
+.basket:hover{
+	-o-transform: scale(1.2,1.2);
+  	-ms-transform: scale(1.2,1.2);
+  	-moz-transform: scale(1.2,1.2);
+  	-webkit-transform: scale(1.2,1.2);
+ 	transform: scale(1.2,1.2);
+}
+
+@media only screen and (max-width: 500px){ /*wery small*/
+	.ws{
+	  	min-width: 20rem;
+	}
+	
+	.ws .td, .ws__font {
+	  	line-height: 1rem;
+	}
+
+	.ws .changeCount {
+		width: 3rem;
+	}
+	
+	.ws-hide-on {
+		display: none !important;
+	}
+
+	.ws	.s6 {
+		max-width: 40%; 
+	}
+
+	.ws__basket {
+		width:32px;
+		height: 32px;
+		top: 6px;
+	}
+
+}
+
+@media only screen and (max-width: 600px) and (min-width: 500px){
+	.ws__basket {
+		width:32px;
+		height: 32px;
+		top: 6px;
+	}
+}
+
+.photo {
+	width: 15rem;
+	height: 15rem;
+	background: #69f0ae;
+	position: relative;
+	margin: 1rem;
+}
+
+.photo_left{
+	float:left;
+}
+
+.photo_right{
+	float:right;
+}
+
+.photo__box{
+	width: 94%;
+	height: 94%;
+	position:relative;
+	top:3%;
+	left:3%;
+}
+
+.photo__bg_gmo {
+	background: url('../img/Zapret-GMO.jpg');
+	background-size: cover;
+	background-position: center; 
+}
+
+.photo__bg_prod {
+	background: url('../img/harvest-vegetables-4.jpg');
+	background-size: cover;
+	background-position: center; 
+}
+
+.footer {
+	height: 3rem;
+	line-height: 3rem;
+}
+
+.modal__delete {
+	width: 2rem;
+	height: 2rem;
+	background: red;
+	cursor:pointer;
+}
+
+table {
+  transition: all .5s ease;
+  line-height: 3.3rem;
+}
+
+.price__button{
+  	-o-transform: scale(0.01,0.01);
+  	-ms-transform: scale(0.01,0.01);
+  	-moz-transform: scale(0.01,0.01);
+  	-webkit-transform: scale(0.01,0.01);
+ 	transform: scale(0.01,0.01);
+}
+
+.tr:hover .price__button, tr:hover .price__button{
+  	-o-transform: scale(1,1);
+  	-ms-transform: scale(1,1);
+  	-moz-transform: scale(1,1);
+  	-webkit-transform: scale(1,1);
+ 	transform: scale(1,1);
+}
+
+.changeCount {
+	-webkit-transition: all .2s linear 0s;
+	-moz-transition: all .2s linear 0s;
+	-o-transition: all .2s linear 0s;
+	transition: all .2s linear 0s;
+	padding: 0;
+	line-height: 1rem;
+	top: .5rem;
+	width: 7rem;
+	height: 2rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.changeCount:hover .changeCount__button{
+	-o-transform: scale(1,1);
+  	-ms-transform: scale(1,1);
+  	-moz-transform: scale(1,1);
+  	-webkit-transform: scale(1,1);
+ 	transform: scale(1,1);
+}
+
+.changeCount__input {
+	display: inline-block;
+	width:4rem;
+	height: 3rem;
+	margin-left:1rem;
+}
+
+
+.changeCount__button {
+	display: inline-block;
+	-o-transform: scale(0.01,0.01);
+  	-ms-transform: scale(0.01,0.01);
+  	-moz-transform: scale(0.01,0.01);
+  	-webkit-transform: scale(0.01,0.01);
+ 	transform: scale(0.01,0.01);
+	width: 1.5rem;
+	height: 1.5rem;
+	border:1px #000000 solid;
+	border-radius: 0.3rem;
+	line-height: 1.5rem;
+}
+.changeCount input[type="text"]{
+	width: 2rem;
+	height: 1.6rem;
+}
+
+.stringDouble{
+	line-height: 1.5rem;
+}
+
+div.bordered {
+	height: 3rem;
+	vertical-align: middle;
+	border-bottom: 1px solid #d0d0d0;
+}
+.td, .th{
+	line-height: 3rem;
+}
+
+.th {
+	font-weight: 800;
+}
+
+.basket__count {
+	position:absolute;
+	right:20px;
+	top:14px;
+	width: 16px;
+	height: 16px;
+	font-size: 0.8rem;
+	border-radius: 8px;
+	line-height: 16px;
+	color:#000000;
+	background: rgba(185, 185, 185, 0.7);
+	cursor: pointer;
+}
+
+.basketModal {
+	position: fixed;
+	z-index: 200;
+}
+
+.modal__overlay{
+	position: fixed;
+	z-index: 199;
+	top: -100px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 125%;
+	width: 100%;
+	background: #000;
+	display: none;
+	opacity: 0.7;
+}
+/*.changeCount__input:focus ~.changeCount__button {
+	-o-transform: scale(0.01,0.01);
+  	-ms-transform: scale(0.01,0.01);
+  	-moz-transform: scale(0.01,0.01);
+  	-webkit-transform: scale(0.01,0.01);
+ 	transform: scale(0.01,0.01);
+}*/
+
+
+
+

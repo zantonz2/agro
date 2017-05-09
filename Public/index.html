@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ПримСельхоз</title>
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="stylesheet" href="CSS/vendor/materialize.min.css">
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="JS/vendor/jquery-3.2.1.min.js"></script>
+	<script src="JS/vendor/materialize.min.js"></script>
+	<script src="JS/vendor/angular.min.js"></script>
+	<script src="JS/vendor/angular-route.min.js"></script>
+</head>
+<body ng-app='app'>
+	<div class="row">
+		<div class="header s12 m12 l12 xl8 offset-xl2">
+			<header class="hide-on-med-and-up" ng-controller="header as head">
+				<div class="header__title header__title_small s12 green accent-4 center">ПримСельхоз</div>
+				<div class="header__btn_small s12 green accent-4">
+					<a class="dropdown-button btn green accent-4" href="" data-activates="dropdownHeader">≡</a>
+				</div>
+	  			<!-- Dropdown Structure -->
+		  		<ul id='dropdownHeader' class='dropdown-content'>
+				    <header-link></header-link>
+		  		</ul>
+			</header>
+			<header class="header hide-on-small-only" ng-controller="header as head">
+				<div class="header__title center">
+					ПримСельхоз
+				</div>
+					<nav class="nav col s12 m12 l12 xl8 offset-xl2 green accent-4">
+						<div class="nav-wrapper">
+						    <ul class="left">
+					        	<header-link></header-link>
+					      	</ul>
+					    </div>
+				  	</nav>
+			</header>
+		    <a  class="basket ws__basket" ng-click="basket.openModal()">
+		    	<ng-include src="'img/basket/cart.svg'"></ng-include>
+		 		<div class="basket__count center">{{basket.products.length}}</div>
+		    </a>
+	    </div>
+		<section class="col s12 m12 l12 xl8 offset-xl2 main z-depth-2">
+			<ng-view></ng-view>
+		</section>		
+		<footer class="page-footer col s12 m12 l12 xl8 offset-xl2 green accent-3 z-depth-2 white-text footer">  
+            © 2017
+		</footer>
+
+		<modal-basket></modal-basket>
+	
+	</div>
+	<script src='JS/app.js'></script>
+	<script src='JS/app.directive.js'></script>
+	<script src='JS/app.route.js'></script>
+	<script src='JS/app.controllers.js'></script>
+	<script src='JS/app.factory.basket.js'></script>
+</body>
+</html>
